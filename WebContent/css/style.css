@@ -18,8 +18,11 @@ body {
 }
 
 h1 {
+    width: 94%;
+    padding-top: 17px;
+    padding-left: 3%;
     font-size: 24px;
-    display: inline;
+    color: #eeeeee;
 }
 
 h2 {
@@ -87,12 +90,12 @@ button {
     color: #721c24;
     background-color: #f8d7da;
 }
-table#employee_list th {
+table#user_list th {
     width: 30%;
     padding: 10px 2%;
 }
 
-table#employee_list td {
+table#user_list td {
     width: 29%;
     padding: 10px 2%;
 }
