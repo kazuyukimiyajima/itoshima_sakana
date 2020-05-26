@@ -8,7 +8,7 @@ import models.User;
 
 public class UserValidator {
     //バリデーションの実行
-    public static List<String> validate(User u, Boolean password_check_flag){
+    public static List<String> validate(User u, Boolean password_check_flag, boolean b){//boolean b????
         List<String> errors = new ArrayList<String>();
 
         String user_error = _validateUser(u.getUser());
