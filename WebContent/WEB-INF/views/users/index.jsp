@@ -19,7 +19,7 @@
                         <td><c:out value="${user.user}" /></td>
                         <td>
                             <c:choose>
-                                <c:when test="${employee.delete_flag == 1}">
+                                <c:when test="${user.delete_flag == 1}">
                                     （削除済み）
                                 </c:when>
                                 <c:otherwise>

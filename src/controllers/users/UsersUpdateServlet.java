@@ -30,7 +30,7 @@ public class UsersUpdateServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	    //CSRF対策
 	    String _token = (String)request.getParameter("_token");
-	    //CSRF対策を行う。_tokenがヌルじゃない場合、IDと_tokenがきちんと取得できた場合
+	    //CSRF対策を行う。_tokenがヌルじゃない場合、IDとがきちんと取得できた場合
 	    if(_token != null && _token.equals(request.getSession().getId())){
 	        //EntityManagerのインスタンス生成
 	        EntityManager em = DBUtil.createEntityManager();
