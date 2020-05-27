@@ -54,7 +54,7 @@ public class UsersCreateServlet extends HttpServlet {
 	        u.setDelete_flag(0);
 
 	        //バリデーションを実行し、エラーがあれば新規ユーザー登録のフォームに戻す
-	        List<String> errors = UserValidator.validate(u, true, true);
+	        List<String> errors = UserValidator.validate(u, true);
             if(errors.size() > 0) {
                 em.close();
 
