@@ -68,12 +68,14 @@ public class Fish {
         this.name = name;
     }
 
+
     public User getUser(){
         return user;
     }
     public void setUser(User user){
         this.user = user;
     }
+
 
     public Timestamp getCreated_at(){
         return created_at;
