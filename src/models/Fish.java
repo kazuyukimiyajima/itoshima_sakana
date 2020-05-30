@@ -1,6 +1,6 @@
 package models;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -68,12 +68,17 @@ public class Fish {
         this.name = name;
     }
 
-
+    public User getUser(){
+        return user;
+    }
+    public void setUser(User user){
+        this.user = user;
+    }
 
     public Timestamp getCreated_at(){
-
         return created_at;
     }
+
     public void setCreated_at(Timestamp created_at){
         this.created_at = created_at;
     }
@@ -83,8 +88,11 @@ public class Fish {
     public Timestamp getUpdated_at(){
         return updated_at;
     }
+
     public void setUpdated_at(Timestamp updated_at) {
         this.updated_at = updated_at;
     }
 
-}
+    }
+
+

@@ -19,7 +19,7 @@
             <c:forEach var="fish" items="${fishes}" varStatus="status">
                 <tr class="row${status.count % 2}">
                     <td class="fish_name"><c:out value="${fish.user.name}" /></td>
-                    <td class="fish_fishname">${fish.name}</td>
+                    <td class="fishname">${fish.name}</td>
                     <td class="fish_action"><a href="<c:url value='/fishes/show?id=${fish.id}' />">詳細を見る</a></td>
                 </tr>
             </c:forEach>
@@ -39,7 +39,7 @@
         </c:choose>
         </c:forEach>
     </div>
-    <p><a href="<c:url value='/fishes/new' />">新規日報の登録</a></p>
+    <p><a href="<c:url value='/fishes/new' />">魚の登録</a></p>
 
     </c:param>
 </c:import>
