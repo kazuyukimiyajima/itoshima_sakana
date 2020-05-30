@@ -41,7 +41,7 @@ public class UsersIndexServlet extends HttpServlet {
 	                         .setMaxResults(15)//データの最大取得件数
 	                         .getResultList();
 	    //全件数を取得
-	    long users_count = (long)em.createNamedQuery("getUserCount",Long.class)
+	    long users_count = (long)em.createNamedQuery("getUsersCount",Long.class)
 	                               .getSingleResult();
 	    em.close();
 

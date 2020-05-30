@@ -11,7 +11,7 @@ public class UserValidator {
     public static List<String> validate(User u, Boolean password_check_flag){//boolean b????
         List<String> errors = new ArrayList<String>();
 
-        String user_error = _validateUser(u.getUser());
+        String user_error = _validateUser(u.getName());
         if(!user_error.equals("")){
             errors.add(user_error);
         }

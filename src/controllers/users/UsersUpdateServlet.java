@@ -54,7 +54,7 @@ public class UsersUpdateServlet extends HttpServlet {
 	        }
 
 	        //フォームで入力があった内容を各プロパティに上書き
-	        u.setUser(request.getParameter("user"));
+	        u.setName(request.getParameter("user"));
 	        u.setAdmin_flag(Integer.parseInt(request.getParameter("admin_flag")));
 	        u.setUpdated_at(new Timestamp(System.currentTimeMillis()));
 	        u.setDelete_flag(0);

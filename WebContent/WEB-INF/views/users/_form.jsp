@@ -10,7 +10,7 @@
     </div>
 </c:if>
 <label for="user">氏名</label><br />
-<input type="text" name="user" value="${user.user}" />
+<input type="text" name="user" value="${user.name}" />
 <br /><br />
 
 <label for="password">パスワード</label><br />

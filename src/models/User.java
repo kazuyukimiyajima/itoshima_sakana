@@ -18,16 +18,16 @@ import javax.persistence.Table;
             query = "SELECT u FROM User AS u ORDER BY u.id DESC"
             ),
     @NamedQuery(
-            name = "getUserCount",
+            name = "getUsersCount",
             query = "SELECT COUNT(u) FROM User AS u"
             ),
     @NamedQuery(
-            name = "checkRegisteredCode",
-            query = "SELECT COUNT(u) FROM User AS u  "
+            name = "checkRegisteredUser",
+            query = "SELECT COUNT(u) FROM User AS u WHERE u.name = :user"
             ),
     @NamedQuery(
-            name = "checkLoginCodeAndPassword",
-            query = "SELECT u FROM User AS u WHERE u.delete_flag = 0 AND u.password = :pass"
+            name = "checkLoginUserAndPassword",
+            query = "SELECT u FROM User AS u WHERE u.delete_flag = 0 AND u.name = :user AND u.password = :pass"
             )
 })
 @Entity
@@ -37,8 +37,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "user", nullable = false)
-    private String user;
+    @Column(name = "name", nullable = false)
+    private String name;
 
     @Column(name = "password", length = 64, nullable = false)
     private String password;
@@ -63,12 +63,12 @@ public class User {
         this.id = id;
     }
 
-    public String getUser() {
-        return user;
+    public String getName() {
+        return name;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPassword() {

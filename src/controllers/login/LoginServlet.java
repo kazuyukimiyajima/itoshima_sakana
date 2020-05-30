@@ -54,13 +54,18 @@ public class LoginServlet extends HttpServlet {
 	    if(user != null && !user.equals("") && plain_pass != null && !plain_pass.equals("")){
 	        EntityManager em = DBUtil.createEntityManager();
 
+
 	        String password = EncryptUtil.getPasswordEncrypt(
 	                plain_pass,
 	                (String)this.getServletContext().getAttribute("salt")
 	                );
+
+
+
 	        //ユーザー名とパスワードが正しいかチェックする
 	        try{
 	            u = em.createNamedQuery("checkLoginUserAndPassword", User.class)
+
 	                    .setParameter("user", user)
 	                    .setParameter("pass",password)
 	                    .getSingleResult();

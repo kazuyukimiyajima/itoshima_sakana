@@ -38,7 +38,7 @@ public class UsersCreateServlet extends HttpServlet {
 	        User u = new User();
 
 	        //リクエストパラメータにセット
-	        u.setUser(request.getParameter("user"));
+	        u.setName(request.getParameter("user"));
 	        u.setPassword(//SHA256という暗号化式を利用し、パスワードを暗号化
 	                EncryptUtil.getPasswordEncrypt(
 	                        request.getParameter("password"),

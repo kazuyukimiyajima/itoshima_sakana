@@ -3,6 +3,7 @@
 	<persistence-unit name="itoshima_sakana" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<class>models.User</class>
+		<class>models.Fish</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/itoshima_sakana?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8"/>
