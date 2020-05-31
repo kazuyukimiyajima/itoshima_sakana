@@ -40,6 +40,7 @@ public class FishesCreateServlet extends HttpServlet {
 
 		    Fish f = new Fish();
 
+		    //ログインユーザーをデータベースからセッションスコープに登録
             f.setUser((User)request.getSession().getAttribute("login_user"));
 
 		    f.setName(request.getParameter("fishname"));
