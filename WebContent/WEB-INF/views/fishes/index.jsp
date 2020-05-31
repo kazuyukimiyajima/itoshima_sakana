@@ -8,7 +8,8 @@
             <c:out value="${flush}"></c:out>
         </div>
     </c:if>
-    <h2>お魚　一覧</h2>
+    <h2>糸島の旬の魚たち！</h2>
+    <h3>マイお魚　一覧</h3>
     <table id="fish_list">
         <tbody>
             <tr>

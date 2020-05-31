@@ -23,6 +23,14 @@ import javax.persistence.Table;
             name = "getFishesCount",
             query = "SELECT COUNT(f) FROM Fish AS f"
             ),
+    @NamedQuery(
+            name = "getMyAllFishes",
+            query = "SELECT f FROM Fish AS f WHERE f.user = :user ORDER BY f.id DESC"
+            ),
+    @NamedQuery(
+            name = "getMyFishesCount",
+            query = "SELECT COUNT(f) FROM Fish AS f WHERE f.user = :user"
+            ),
 })
 @Entity
 public class Fish {
